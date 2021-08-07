@@ -9,7 +9,6 @@ What are the requirements? Functional requirements and non functional requiremen
 
 ## I. SecKill System 秒杀系统
 ### Scenario (Requirements)
-
 We can break it down to two parts:
 * Business side
 * Customer side
