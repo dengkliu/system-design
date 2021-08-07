@@ -7,8 +7,12 @@ What are the requirements? Functional requirements and non functional requiremen
 ### Storage
 ### Scale
 
-## SecKill System 秒杀系统
+## I. SecKill System 秒杀系统
 ### Scenario (Requirements)
+
+We can break it down to two parts:
+* Business side
+* Customer side
 ### Service
 * Monolithic
 * Microservices
