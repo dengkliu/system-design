@@ -17,4 +17,7 @@ We can break it down to two parts:
 * Microservices
 ### Storage
 ### Scale
+* Database Crash
+  * Solution - Database cache, e.g, Redis.
+* 
 
