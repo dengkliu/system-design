@@ -30,4 +30,4 @@ We can break it down to two parts:
 Redis is an open source (BSD), in-memory key-value data structure store (kind of no sql), which can be used as a database, cache or message broker. It’s a NoSQL database used in GitHub, Pinterest and Snapchat. Redis performance and atomic manipulation of data structures solves problems which can often be found with relational databases.
 ### Producer/Consumer Model
 ### Content Delivery Network
-### Avalanche （Fan-out）
+### Avalanche (Fan-out)
