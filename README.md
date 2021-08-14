@@ -49,9 +49,7 @@ How to store and query the data?
   * SQL Database
   * NoSQL Database
 * File System
-  * Picture and video media files
 * Cache
-  * Nopersistent data. Fast.
 
 ### Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
