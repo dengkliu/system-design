@@ -17,14 +17,20 @@ System design - Design tiny url website, new feeds system
 * Analysis ability. (25%)分析能力
 * Tradeoff. (15%) 权衡
 * Knowledge base. (15%) 知识储备
-Reference - https://www.jiuzhang.com/qa/1246
 
 ## 4S Methodology 4S分析法
 ### Scenario (Requirements)
-What are the requirements? Functional requirements and non functional requirements.
+What are the requirements? Functional requirements and non functional requirements (TPS).
+* Ask/Features/TPS/DAU/Interfaces
 ### Service
+Divide the system into micro services.
+* Split/Applicaiton/Module
 ### Storage
+How to store and query the data?
+* Schema/Data/SQL/NoSQL/File System
 ### Scale
+Fix drawbacks, deal with possible problems.
+* Sharding/Optimize/Special Case
 
 ## I. SecKill System 秒杀系统
 ### Scenario (Requirements)
@@ -39,8 +45,6 @@ We can break it down to two parts:
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
 * 
-
-
 
 ## Basic Knowledge
 ### Database Index
