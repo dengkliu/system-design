@@ -45,7 +45,7 @@ Divide the system into micro services. Split/Applicaiton/Module
 
 ### Storage
 How to store and query the data? 
-* Database
+* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
   * SQL Database
   * NoSQL Database
 * File System
