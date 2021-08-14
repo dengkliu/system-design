@@ -1,8 +1,25 @@
-# System Design
+# System Design 系统设计
 
-## 
+## System Design vs OOD 系统设计 vs 面向对象设计
 
-## 4S Methodology
+### Form
+OOD requires coding, microscope design. System design requires hight level abstraction, more backend.
+### Knowledge
+OOD - class, object, method, inheritance, interface
+System design - database, schema, SQL, NoSQL, Memcached, File System, Distributed System, latency, scalability, master slave, load balancer, web server, message queue, sharding, consistent hashing and so on.
+### Typical problem
+OOD - Design an elevator, a game.
+System design - Design tiny url website, new feeds system
+
+## Evaluation System 评分系统
+* Work solution. (25%) 可行解
+* Special case. (20%) 特定问题
+* Analysis ability. (25%)分析能力
+* Tradeoff. (15%) 权衡
+* Knowledge base. (15%) 知识储备
+Reference - https://www.jiuzhang.com/qa/1246
+
+## 4S Methodology 4S分析法
 ### Scenario (Requirements)
 What are the requirements? Functional requirements and non functional requirements.
 ### Service
@@ -22,6 +39,8 @@ We can break it down to two parts:
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
 * 
+
+
 
 ## Basic Knowledge
 ### Database Index
