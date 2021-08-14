@@ -44,7 +44,7 @@ Divide the system into micro services. Split/Applicaiton/Module
 * Merge shared service.
 
 ### Storage
-How to store and query the data? 
+How to store and query the data? For each of the services, you may need a different storage.
 * Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
   * SQL Database
   * NoSQL Database
