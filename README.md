@@ -23,7 +23,15 @@ System design - Design tiny url website, new feeds system
 To have a work solution, you need to go through following:
 
 ### Scenario (Requirements)
-What are the requirements? Functional requirements and non functional requirements (TPS). Ask/Features/TPS/DAU/Interfaces
+* What are the features to support?
+* What is the DAU and MAU. (Usually MAU = 2 * DAW)
+* What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
+* What would be the peak TPS? 3 * Avg TPS
+* For fast growing product - MAX peak users in 3 months = Peak users * 2. 
+* Read TPS >> Write TPS usually.
+
+The calculated numbers don't really matter, what matters is the calculation process.
+
 ### Service
 Divide the system into micro services. Split/Applicaiton/Module
 ### Storage
