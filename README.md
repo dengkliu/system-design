@@ -29,8 +29,6 @@ Divide the system into micro services. Split/Applicaiton/Module
 ### Storage
 How to store and query the data? Schema/Data/SQL/NoSQL/File System
 
-To improve the system, need to do:
-
 ### Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
