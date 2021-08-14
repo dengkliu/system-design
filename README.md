@@ -26,6 +26,10 @@ To have a work solution, you need to go through following:
 * What are the features to support?
 * What is the DAU and MAU. (Usually MAU = 2 * DAW)
 * What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
+  * TPS 100 - you can use your laptop
+  * TPS 1000 - Use a good web server. Need to consider single point failure.
+  * TPS 1000,000 - Use 1000 web servers. Need to consider maintainance.
+  * Usually a web service can handle 1k TPS, a SQL DB can handle 1k TPS (may reduce due to joins and index), a NoSQL DB can handle 10k (Cassandra) to 1M (Memcached) TPS.
 * What would be the peak TPS? 3 * Avg TPS
 * For fast growing product - MAX peak users in 3 months = Peak users * 2. 
 * Read TPS >> Write TPS usually.
@@ -34,6 +38,7 @@ The calculated numbers don't really matter, what matters is the calculation proc
 
 ### Service
 Divide the system into micro services. Split/Applicaiton/Module
+
 ### Storage
 How to store and query the data? Schema/Data/SQL/NoSQL/File System
 
