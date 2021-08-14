@@ -12,6 +12,7 @@ OOD - Design an elevator, a game.
 System design - Design tiny url website, new feeds system
 
 ## Evaluation System 评分系统
+
 * Work solution. (25%) 可行解
 * Special case. (20%) 特定问题
 * Analysis ability. (25%)分析能力
@@ -23,6 +24,7 @@ System design - Design tiny url website, new feeds system
 To have a work solution, you need to go through following:
 
 ### Scenario (Requirements)
+
 * What are the features to support?
 * What is the DAU and MAU. (Usually MAU = 2 * DAW)
 * What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
@@ -38,6 +40,8 @@ The calculated numbers don't really matter, what matters is the calculation proc
 
 ### Service
 Divide the system into micro services. Split/Applicaiton/Module
+* Replay the featyures and add a service for each of them.
+* Merge shared service.
 
 ### Storage
 How to store and query the data? Schema/Data/SQL/NoSQL/File System
@@ -45,7 +49,7 @@ How to store and query the data? Schema/Data/SQL/NoSQL/File System
 ### Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
-## I. SecKill System 秒杀系统
+## 1. SecKill System 秒杀系统
 ### Scenario (Requirements)
 We can break it down to two parts:
 * Business side
