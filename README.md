@@ -19,18 +19,17 @@ System design - Design tiny url website, new feeds system
 * Knowledge base. (15%) 知识储备
 
 ## 4S Methodology 4S分析法
+
+To have a work solution, you need to go through following:
+
 ### Scenario (Requirements)
-What are the requirements? Functional requirements and non functional requirements (TPS).
-* Ask/Features/TPS/DAU/Interfaces
+What are the requirements? Functional requirements and non functional requirements (TPS). Ask/Features/TPS/DAU/Interfaces
 ### Service
-Divide the system into micro services.
-* Split/Applicaiton/Module
+Divide the system into micro services. Split/Applicaiton/Module
 ### Storage
-How to store and query the data?
-* Schema/Data/SQL/NoSQL/File System
+How to store and query the data? Schema/Data/SQL/NoSQL/File System
 ### Scale
-Fix drawbacks, deal with possible problems.
-* Sharding/Optimize/Special Case
+Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## I. SecKill System 秒杀系统
 ### Scenario (Requirements)
