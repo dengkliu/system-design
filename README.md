@@ -1,5 +1,7 @@
 # System Design
 
+## 
+
 ## 4S Methodology
 ### Scenario (Requirements)
 What are the requirements? Functional requirements and non functional requirements.
@@ -20,8 +22,6 @@ We can break it down to two parts:
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
 * 
-
-
 
 ## Basic Knowledge
 ### Database Index
