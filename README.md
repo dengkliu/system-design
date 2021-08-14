@@ -44,7 +44,14 @@ Divide the system into micro services. Split/Applicaiton/Module
 * Merge shared service.
 
 ### Storage
-How to store and query the data? Schema/Data/SQL/NoSQL/File System
+How to store and query the data? 
+* Database
+  * SQL Database
+  * NoSQL Database
+* File System
+  * Picture and video media files
+* Cache
+  * Nopersistent data. Fast.
 
 ### Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
