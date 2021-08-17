@@ -49,7 +49,7 @@ Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
   * SQL Database
   * NoSQL Database
 * File System - it only provides very simple operations to access files.
-* Cache
+* Cache - in memory storage, can be very fast, but it is expensive. Redis (support more data types) and Memocached (support string only).
 ### Pull model and Push model for NewFeeds system
 * Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow.
 * Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout.
