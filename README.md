@@ -56,9 +56,6 @@ Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
   * We can cache each user's news feed. Cache most recent 1k tweets and only pull new tweets since last cache timestamp.
 * Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout. Push is often used when it doesn't require strong real-time and users don't post that many tweets, and there is no super star.
   * Don't do fanout for inactive users. Rank followers by weight.
-  
-* For superstar (followers >> following), we can do pull instead of push. For normal users, we can do push.
-
 
 ## Design Examples
 
