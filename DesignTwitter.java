@@ -1,4 +1,5 @@
 /**
+ * https://www.lintcode.com/problem/501/solution/23123
  * Definition of Tweet:
  * public class Tweet {
  *     public int id;
