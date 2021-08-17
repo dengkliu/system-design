@@ -51,8 +51,13 @@ Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 * File System - it only provides very simple operations to access files.
 * Cache - in memory storage, can be very fast, but it is expensive. Redis (support more data types) and Memocached (support string only).
 ### Pull model and Push model for NewFeeds system
-* Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow.
-* Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout.
+* Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow. Pull is often used when it requires strong real-time and users post lots of tweets and there exists many super stars.
+  * We can cache each user's timeline. Cache most recent 1k tweets and only request new tweets since last cache timestamp.
+  * We can cache each user's news feed. Cache most recent 1k tweets and only pull new tweets since last cache timestamp.
+* Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout. Push is often used when it doesn't require strong real-time and users don't post that many tweets, and there is no super star.
+  * Don't do fanout for inactive users. Rank followers by weight.
+  
+* For superstar (followers >> following), we can do pull instead of push. For normal users, we can do push.
 
 
 ## Design Examples
