@@ -79,4 +79,4 @@ Redis is an open source (BSD), in-memory key-value data structure store (kind of
 ### Avalanche (Fan-out)
 
 ## Practice
-* Design a twitter
+* [Design a twitter](https://github.com/dengkliu/system-design/blob/main/DesignTwitter.java)
