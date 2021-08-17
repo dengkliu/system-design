@@ -11,7 +11,7 @@ System design - database, schema, SQL, NoSQL, Memcached, File System, Distribute
 OOD - Design an elevator, a game.
 System design - Design tiny url website, new feeds system
 
-## Evaluation System 评分系统
+## Evaluation Critiera 评分系统
 
 * Work solution. (25%) 可行解
 * Special case. (20%) 特定问题
@@ -66,9 +66,10 @@ We can break it down to two parts:
 ### Scale
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
-* 
+
 
 ## Basic Knowledge
+### Pull & Push model
 ### Database Index
 ### Transaction
 ### Redis 
@@ -76,3 +77,6 @@ Redis is an open source (BSD), in-memory key-value data structure store (kind of
 ### Producer/Consumer Model
 ### Content Delivery Network
 ### Avalanche (Fan-out)
+
+## Practice
+* Design a twitter
