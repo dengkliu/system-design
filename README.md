@@ -10,6 +10,13 @@
 * Tradeoff. (15%) 权衡
 * Knowledge base. (15%) 知识储备
 
+### Philosophy
+
+**Ask Before Design**
+**No More No Less**
+**Work Solution First**
+**Analysis is Important than Solution**
+
 ### 4S Methodology 4S分析法
 
 To have a work solution, you need to go through following:
@@ -56,6 +63,10 @@ Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
   * We can cache each user's news feed. Cache most recent 1k tweets and only pull new tweets since last cache timestamp.
 * Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout. Push is often used when it doesn't require strong real-time and users don't post that many tweets, and there is no super star.
   * Don't do fanout for inactive users. Rank followers by weight.
+
+### Thundering Herd 
+
+When a very popular record get removed from cache, it will lead to huge amount of query traffic go into DB (cache miss) and overwhelm the database server.
 
 ## Design Examples
 
