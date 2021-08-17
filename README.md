@@ -17,6 +17,8 @@ To have a work solution, you need to go through following:
 #### 1. Scenario (Requirements)
 
 * Functional requirements - What are the features to support?
+  * First enumerate the features
+  * Sort and find the most important features.
 * Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW)
   * What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
     * TPS 100 - you can use your laptop
@@ -35,18 +37,23 @@ Divide the system into micro services. Split/Applicaiton/Module
 * Merge shared service.
 
 #### 3. Storage
-How to store and query the data? For each of the services, you may need a different storage.
-* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
-  * SQL Database
-  * NoSQL Database
-* File System
-* Cache
+1. For each of the services, you may need a different storage. Find it out.
+2. Design the schema for the table.
 
 #### 4. Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Knowledge Collection
-### Push model and Pull model
+### Data Storage
+* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
+  * SQL Database
+  * NoSQL Database
+* File System - it only provides very simple operations to access files.
+* Cache
+### Pull model and Push model for NewFeeds system
+* Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow.
+* Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout.
+
 
 ## Design Examples
 
