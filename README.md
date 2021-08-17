@@ -14,7 +14,7 @@
 
 To have a work solution, you need to go through following:
 
-#### Scenario (Requirements)
+#### 1. Scenario (Requirements)
 
 * Functional requirements - What are the features to support?
 * Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW)
@@ -29,12 +29,12 @@ To have a work solution, you need to go through following:
 
 **The calculated numbers don't really matter, what matters is the calculation process**.
 
-#### Service
+#### 2. Service
 Divide the system into micro services. Split/Applicaiton/Module
 * Replay the featyures and add a service for each of them.
 * Merge shared service.
 
-#### Storage
+#### 3. Storage
 How to store and query the data? For each of the services, you may need a different storage.
 * Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
   * SQL Database
@@ -42,7 +42,7 @@ How to store and query the data? For each of the services, you may need a differ
 * File System
 * Cache
 
-#### Scale
+#### 4. Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Knowledge Collection
