@@ -50,21 +50,6 @@ Divide the system into micro services. Split/Applicaiton/Module
 #### 4. Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
-### Pull model and Push model for NewFeeds system
-* Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow. Pull is often used when it requires strong real-time and users post lots of tweets and there exists many super stars.
-  * We can cache each user's timeline. Cache most recent 1k tweets and only request new tweets since last cache timestamp.
-  * We can cache each user's news feed. Cache most recent 1k tweets and only pull new tweets since last cache timestamp.
-* Push model. Fanout after a user posts a tweet. The fanout can be done asynchornously. However, a superstar may have lots of fans so it can put pressure on the system to do the fanout. Push is often used when it doesn't require strong real-time and users don't post that many tweets, and there is no super star.
-  * Don't do fanout for inactive users. Rank followers by weight.
-* Related posts
-  * https://www.jiuzhang.com/qa/2074/
-  * https://www.jiuzhang.com/qa/2031/
-  * https://www.jiuzhang.com/qa/1741/
-  * https://www.jiuzhang.com/qa/1839/
-  * https://www.jiuzhang.com/qa/962/
-
-
-
 ## Design Examples
 
 ### SecKill System 秒杀系统
