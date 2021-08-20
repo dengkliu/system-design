@@ -35,20 +35,19 @@ To have a work solution, you need to go through following:
     * What would be the peak TPS? 3 * Avg TPS
     * For fast growing product - MAX peak users in 3 months = Peak users * 2. 
     * Read TPS >> Write TPS usually.
+   The calculated numbers don't really matter, what matters is the calculation process.
 
-**The calculated numbers don't really matter, what matters is the calculation process**.
+#### II Service - Divide the system into micro services.
 
-#### II Service
-Divide the system into micro services. Split/Applicaiton/Module
-* Replay the featyures and add a service for each of them.
-* Merge shared service.
+Replay the featyures and add a service for each of them. Merge shared service.
 
 #### III Storage
-1. For each of the services, you may need a different storage. Find it out.
-2. Design the schema for the table.
 
-#### IV Scale
-Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
+For each of the services, you may need a different storage. Find it out. Design the schema for the table.
+
+#### IV Scale - Fix drawbacks, deal with possible problems. 
+
+Sharding/Optimize/Special Case
 
 ## Design Examples
 
