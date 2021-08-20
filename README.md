@@ -50,8 +50,6 @@ Divide the system into micro services. Split/Applicaiton/Module
 #### 4. Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
-
-
 ### Pull model and Push model for NewFeeds system
 * Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow. Pull is often used when it requires strong real-time and users post lots of tweets and there exists many super stars.
   * We can cache each user's timeline. Cache most recent 1k tweets and only request new tweets since last cache timestamp.
@@ -65,9 +63,7 @@ Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
   * https://www.jiuzhang.com/qa/1839/
   * https://www.jiuzhang.com/qa/962/
 
-### Thundering Herd 
 
-When a very popular record get removed from cache, it will lead to huge amount of query traffic go into DB (cache miss) and overwhelm the database server.
 
 ## Design Examples
 
@@ -98,6 +94,9 @@ Redis is an open source (BSD), in-memory key-value data structure store (kind of
 * Producer/Consumer Model
 * Content Delivery Network
 * Avalanche (Fan-out)
+* Thundering Herd 
+When a very popular record get removed from cache, it will lead to huge amount of query traffic go into DB (cache miss) and overwhelm the database server.
 
 ## Practice
 * [Design a twitter](https://github.com/dengkliu/system-design/blob/main/DesignTwitter.java)
+
