@@ -26,7 +26,7 @@ To have a work solution, you need to go through following:
 * Functional requirements - What are the features to support?
   * First enumerate the features
   * Sort and find the most important features.
-* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW)
+* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW). The calculated numbers don't really matter, what matters is the calculation process.
   * What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
     * TPS 100 - you can use your laptop
     * TPS 1000 - Use a good web server. Need to consider single point failure.
@@ -35,7 +35,7 @@ To have a work solution, you need to go through following:
     * What would be the peak TPS? 3 * Avg TPS
     * For fast growing product - MAX peak users in 3 months = Peak users * 2. 
     * Read TPS >> Write TPS usually.
-   The calculated numbers don't really matter, what matters is the calculation process.
+   
 
 #### II Service - Divide the system into micro services.
 
