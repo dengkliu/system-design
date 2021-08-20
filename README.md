@@ -21,7 +21,7 @@
 
 To have a work solution, you need to go through following:
 
-#### 1. Scenario (Requirements)
+#### I Scenario (Requirements)
 
 * Functional requirements - What are the features to support?
   * First enumerate the features
@@ -38,21 +38,23 @@ To have a work solution, you need to go through following:
 
 **The calculated numbers don't really matter, what matters is the calculation process**.
 
-#### 2. Service
+#### II Service
 Divide the system into micro services. Split/Applicaiton/Module
 * Replay the featyures and add a service for each of them.
 * Merge shared service.
 
-#### 3. Storage
+#### III Storage
 1. For each of the services, you may need a different storage. Find it out.
 2. Design the schema for the table.
 
-#### 4. Scale
+#### IV Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Design Examples
 
-### SecKill System 秒杀系统
+### I Twitter
+
+### II SecKill System 秒杀系统
 #### Scenario (Requirements)
 We can break it down to two parts:
 * Business side
