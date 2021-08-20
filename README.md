@@ -50,13 +50,8 @@ Divide the system into micro services. Split/Applicaiton/Module
 #### 4. Scale
 Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
-## Knowledge Collection
-### Data Storage
-* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
-  * SQL Database
-  * NoSQL Database
-* File System - it only provides very simple operations to access files.
-* Cache - in memory storage, can be very fast, but it is expensive. You can think of cache as hashtable. Redis (support more data types) and Memocached (support string only).
+
+
 ### Pull model and Push model for NewFeeds system
 * Pull model. Pull new feeds from each person followed from the db and merge them together. DB reads can be very slow. Pull is often used when it requires strong real-time and users post lots of tweets and there exists many super stars.
   * We can cache each user's timeline. Cache most recent 1k tweets and only request new tweets since last cache timestamp.
@@ -89,15 +84,20 @@ We can break it down to two parts:
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
 
-
-## Basic Knowledge
-### Database Index
-### Transaction
-### Redis 
+## Knowledge Collection
+### Data Storage
+* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
+  * SQL Database
+  * NoSQL Database
+* File System - it only provides very simple operations to access files.
+* Cache - in memory storage, can be very fast, but it is expensive. You can think of cache as hashtable. Redis (support more data types) and Memocached (support string only).
+* Database Index
+* Transaction
+* Redis 
 Redis is an open source (BSD), in-memory key-value data structure store (kind of no sql), which can be used as a database, cache or message broker. It’s a NoSQL database used in GitHub, Pinterest and Snapchat. Redis performance and atomic manipulation of data structures solves problems which can often be found with relational databases.
-### Producer/Consumer Model
-### Content Delivery Network
-### Avalanche (Fan-out)
+* Producer/Consumer Model
+* Content Delivery Network
+* Avalanche (Fan-out)
 
 ## Practice
 * [Design a twitter](https://github.com/dengkliu/system-design/blob/main/DesignTwitter.java)
