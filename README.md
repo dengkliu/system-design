@@ -40,7 +40,7 @@ To have a work solution, you need to go through following:
 #### 4） Scale - Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Design Examples
-### I Twitter
+### Twitter
 #### 1） Scenario (Requirements)
 First enumerate the features, then sort and find out the important ones!
 * **User register and signin**.
