@@ -130,6 +130,8 @@ HTTP 1.1
 * Support long connection, 
 * Support HTTP pipeline. 
 
+HTTP 2.0
+
 ### WebSocket
 
 Can support duplex commnication. The server side can actively send a response to client, so the it is more real-time.
