@@ -93,21 +93,26 @@ We can break it down to two parts:
 
 ## Knowledge Collection
 ### Data Storage
-* Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
-  * SQL Database
-  * NoSQL Database
-* File System - it only provides very simple operations to access files.
-* Cache - in memory storage, can be very fast, but it is expensive. You can think of cache as hashtable. Redis (support more data types) and Memocached (support string only).
-* Database Index - an index is an additional structure that is derived from the primary data of the DB. Any kind of index usually slows down writes, because the index also needs to be updated every time data is writtern. Well-chosen indexes speed up read queries. 
-* Transaction. A transaction is a way of representing a state change. Transactions ideally have four properties, commonly known as ACID:
-  * Atomic (if the change is committed, it happens in one fell swoop; you can never see "half a change")
-  * Consistent (the change can only happen if the new state of the system will be valid; any attempt to commit an invalid change will fail, leaving the system in its previous valid state)
-  * Isolated (no-one else sees any part of the transaction until it's committed)
-  * Durable (once the change has happened - if the system says the transaction has been committed, the client doesn't need to worry about "flushing" the system to make the change "stick")
-* Redis 
-Redis is an open source (BSD), in-memory key-value data structure store (kind of no sql), which can be used as a database, cache or message broker. It’s a NoSQL database used in GitHub, Pinterest and Snapchat. Redis performance and atomic manipulation of data structures solves problems which can often be found with relational databases.
-* Thundering Herd 
-When a very popular record get removed from cache, it will lead to huge amount of query traffic go into DB (cache miss) and overwhelm the database server.
+
+Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
+* SQL Database
+* NoSQL Database
+
+File System - it only provides very simple operations to access files.
+
+Cache - in memory storage, can be very fast, but it is expensive. You can think of cache as hashtable. Redis (support more data types) and Memocached (support string only).
+
+Database Index - an index is an additional structure that is derived from the primary data of the DB. Any kind of index usually slows down writes, because the index also needs to be updated every time data is writtern. Well-chosen indexes speed up read queries. 
+
+Transaction. A transaction is a way of representing a state change. Transactions ideally have four properties, commonly known as ACID:
+* Atomic (if the change is committed, it happens in one fell swoop; you can never see "half a change")
+* Consistent (the change can only happen if the new state of the system will be valid; any attempt to commit an invalid change will fail, leaving the system in its previous valid state)
+* Isolated (no-one else sees any part of the transaction until it's committed)
+* Durable (once the change has happened - if the system says the transaction has been committed, the client doesn't need to worry about "flushing" the system to make the change "stick")
+
+Redis. Redis is an open source (BSD), in-memory key-value data structure store (kind of no sql), which can be used as a database, cache or message broker. It’s a NoSQL database used in GitHub, Pinterest and Snapchat. Redis performance and atomic manipulation of data structures solves problems which can often be found with relational databases.
+
+Thundering Herd. When a very popular record get removed from cache, it will lead to huge amount of query traffic go into DB (cache miss) and overwhelm the database server.
 
 ### Web server
 
