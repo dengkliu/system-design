@@ -40,6 +40,7 @@ To have a work solution, you need to go through following:
 #### 4） Scale - Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Design Examples
+
 ### Twitter
 #### 1） Scenario (Requirements)
 First enumerate the features, then sort and find out the important ones!
@@ -74,7 +75,8 @@ Then ask about non-functional requirements.
 * Fan-out (push model)
 * Pull model
 * hybrid 
-### II SecKill System 秒杀系统
+
+###  SecKill System 秒杀系统
 #### Scenario (Requirements)
 We can break it down to two parts:
 * Business side
