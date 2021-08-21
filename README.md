@@ -21,36 +21,27 @@
 
 To have a work solution, you need to go through following:
 
-#### I Scenario (Requirements)
+#### 1） Scenario (Requirements)
 
-* Functional requirements - What are the features to support?
-  * First enumerate the features
-  * Sort and find the most important features.
-* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW). The calculated numbers don't really matter, what matters is the calculation process.
-  * What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
-    * TPS 100 - you can use your laptop
-    * TPS 1000 - Use a good web server. Need to consider single point failure.
-    * TPS 1000,000 - Use 1000 web servers. Need to consider maintainance.
-    * Usually a web service can handle 1k TPS, a SQL DB can handle 1k TPS (may reduce due to joins and index), a NoSQL DB can handle 10k (Cassandra) to 1M (Memcached) TPS.
-    * What would be the peak TPS? 3 * Avg TPS
-    * For fast growing product - MAX peak users in 3 months = Peak users * 2. 
-    * Read TPS >> Write TPS usually.
+* Functional requirements - What are the features to support? First enumerate the features，then sort and find the most important features.
+* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW). The calculated numbers don't really matter, what matters is the calculation process. What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
+  * TPS 100 - you can use your laptop
+  * TPS 1000 - Use a good web server. Need to consider single point failure.
+  * TPS 1000,000 - Use 1000 web servers. Need to consider maintainance.
+  * Usually a web service can handle 1k TPS, a SQL DB can handle 1k TPS (may reduce due to joins and index), a NoSQL DB can handle 10k (Cassandra) to 1M (Memcached) TPS.
+  * What would be the peak TPS? 3 * Avg TPS
+  * For fast growing product - MAX peak users in 3 months = Peak users * 2. 
+  * Read TPS >> Write TPS usually.
    
-#### II Service - Divide the system into micro services.
+#### 2） Service - Divide the system into micro services. Replay the featyures and add a service for each of them. Merge shared service.
 
-Replay the featyures and add a service for each of them. Merge shared service.
+#### 3） Storage - For each of the services, you may need a different storage. Find it out. Design the schema for the table.
 
-#### III Storage
-
-For each of the services, you may need a different storage. Find it out. Design the schema for the table.
-
-#### IV Scale - Fix drawbacks, deal with possible problems. 
-
-Sharding/Optimize/Special Case
+#### 4） Scale - Fix drawbacks, deal with possible problems. Sharding/Optimize/Special Case
 
 ## Design Examples
 ### I Twitter
-#### Scenario (Requirements)
+#### 1） Scenario (Requirements)
 First enumerate the features, then sort and find out the important ones!
 * **User register and signin**.
 * User profile display edit.
@@ -69,17 +60,17 @@ Then ask about non-functional requirements.
   * Then we assume every people daily makes 60 requests, then avg TPS is 150M * 60 / 86400 = 10k.
 * Let's say Timeline read TPS
 * Newsfeed read TPS
-#### Service 
+#### 2） Service 
 * User signin/register service.
 * Friends service.
 * Tweets Service.
 * Media Service
-#### Storage
+#### 3） Storage
 * Users table (SQL)
 * Tweets table (NoSQL)
 * Friends table (SQL)
 * Media Storage (S3)
-#### Scale
+#### 4） Scale
 * Fan-out (push model)
 * Pull model
 * hybrid 
