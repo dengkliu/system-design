@@ -51,13 +51,12 @@ Sharding/Optimize/Special Case
 ## Design Examples
 ### I Twitter
 #### Scenario (Requirements)
-
 First enumerate the features, then sort and find out the important ones!
 * **User register and signin**.
 * User profile display edit.
 * **User can follow other users**.
 * **User can post a tweet**.
-* **User can delete/update**
+* **User can delete/update a tweet**
 * User can search a tweet
 * User can upload image and video when posting a tweet.
 * **User can get newsfeed, consists of his/her own tweets and the thweets from the people he/she followers**.
@@ -65,13 +64,16 @@ First enumerate the features, then sort and find out the important ones!
 * User can like a tweet.
 
 Then ask about non-functional requirements. 
-* Daily active users, month active users? Usually DAU = 1/2 * MAU. Let's say MAU 
+* Daily active users, month active users? Usually DAU = 1/2 * MAU. 
+  * Let's say MAU is 300 million and DAU is 150 million.
+  * Then we assume every people daily makes 60 requests, then avg TPS is 150M * 60 / 86400 = 10k.
 * Let's say Timeline read TPS
 * Newsfeed read TPS
 #### Service 
 * User signin/register service.
 * Friends service.
 * Tweets Service.
+* Media Service
 #### Storage
 * Users table (SQL)
 * Tweets table (NoSQL)
