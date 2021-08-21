@@ -89,6 +89,8 @@ We can break it down to two parts:
 * Database Crash
   * Solution - Database cache, e.g, Redis. The query goes to cache. 
 
+### Collaborative Editing System
+
 ## Knowledge Collection
 ### Data Storage
 * Database - Database is just a wrapper of file system, to provide an interface of various query operations. 
@@ -107,10 +109,20 @@ When a very popular record get removed from cache, it will lead to huge amount o
 
 ![Screen Shot 2021-08-20 at 7 12 55 PM](https://user-images.githubusercontent.com/12690456/130301718-63960e34-3250-4a18-b7ae-92a7727771ba.png)
 
+### HTTP
 
-* Producer/Consumer Model
-* Content Delivery Network
-* Avalanche (Fan-out)
+HTTP 1.0 -
+* Doesn't support long connection, a single TCP connection can only support 1 request and 1 response.
+* Doesn't support HTTP pipeline.
+
+HTTP 1.1
+* Support long connection, 
+* Support HTTP pipeline. 
+
+### WebSocket
+
+Can support duplex commnication. The server side can actively send a response to client, so the it is more real-time.
+
 
 ## Practice
 * [Design a twitter](https://github.com/dengkliu/system-design/blob/main/DesignTwitter.java)
