@@ -23,8 +23,8 @@ To have a work solution, you need to go through following:
 
 #### 1） Scenario (Requirements)
 
-* Functional requirements - What are the features to support? First enumerate the features，then sort and find the most important features.
-* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAW). The calculated numbers don't really matter, what matters is the calculation process. What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
+* Functional requirements - What are the features to support? First enumerate the features, then sort and find the most important features.
+* Non-functional requirements - What is the DAU and MAU. (Usually MAU = 2 * DAU). The calculated numbers don't really matter, what matters is the calculation process. What would be the average TPS? - Requests per person daily (like 50? 100?) * DAU / 86400 (seconds of a day)
   * TPS 100 - you can use your laptop
   * TPS 1000 - Use a good web server. Need to consider single point failure.
   * TPS 1000,000 - Use 1000 web servers. Need to consider maintainance.
@@ -45,7 +45,7 @@ To have a work solution, you need to go through following:
 #### 1） Scenario (Requirements)
 First enumerate the features, then sort and find out the important ones!
 * **User register and signin**.
-* User profile display edit.
+* User profile display and edit.
 * **User can follow other users**.
 * **User can post a tweet**.
 * **User can delete/update a tweet**
@@ -74,7 +74,7 @@ Then ask about non-functional requirements.
 #### 4） Scale
 * Fan-out (push model)
 * Pull model
-* hybrid 
+* Hybrid 
 
 ###  SecKill System 秒杀系统
 #### Scenario (Requirements)
